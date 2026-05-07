@@ -4,11 +4,11 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Current Phase
 
-- Feature 01: Design System — complete
+- Feature 02: Editor Chrome — in progress
 
 ## Current Goal
 
-- Move to the next feature unit.
+- Implement editor navbar and project sidebar shell components.
 
 ## Completed
 
@@ -23,7 +23,9 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## In Progress
 
-- None.
+- **Editor Chrome (02-editor.md)**
+  - `components/editor/editor-navbar.tsx` — fixed top navbar, sidebar toggle (PanelLeftOpen/Close), left/center/right sections
+  - `components/editor/project-sidebar.tsx` — floating overlay sidebar, slides from left, Tabs (My Projects / Shared), New Project footer button
 
 ## Next Up
 

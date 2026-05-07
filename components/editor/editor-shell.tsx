@@ -1,0 +1,29 @@
+"use client"
+
+import { useState } from "react"
+import { EditorNavbar } from "@/components/editor/editor-navbar"
+import { ProjectSidebar } from "@/components/editor/project-sidebar"
+
+interface EditorShellProps {
+  children: React.ReactNode
+}
+
+export function EditorShell({ children }: EditorShellProps) {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+
+  return (
+    <div className="h-screen overflow-hidden flex flex-col">
+      <EditorNavbar
+        isSidebarOpen={isSidebarOpen}
+        onSidebarToggle={() => setIsSidebarOpen((prev) => !prev)}
+      />
+      <ProjectSidebar
+        isOpen={isSidebarOpen}
+        onClose={() => setIsSidebarOpen(false)}
+      />
+      <main className="flex-1 pt-12 overflow-hidden">
+        {children}
+      </main>
+    </div>
+  )
+}
